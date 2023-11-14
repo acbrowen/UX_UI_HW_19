@@ -1,0 +1,11 @@
+/* Webfont: ByNote-Swash */@font-face {
+    font-family: 'ByNoteSwash';
+    src: url('ByNote-Swash.eot'); /* IE9 Compat Modes */
+    src: url('ByNote-Swash.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('ByNote-Swash.woff') format('woff'), /* Modern Browsers */
+         url('ByNote-Swash.ttf') format('truetype'); /* Safari, Android, iOS */
+             font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+

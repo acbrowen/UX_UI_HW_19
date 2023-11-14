@@ -1,0 +1,11 @@
+/* Webfont: ByNote */@font-face {
+    font-family: 'ByNote';
+    src: url('By Note.eot'); /* IE9 Compat Modes */
+    src: url('By Note.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('By Note.woff') format('woff'), /* Modern Browsers */
+         url('By Note.ttf') format('truetype'); /* Safari, Android, iOS */
+             font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+
