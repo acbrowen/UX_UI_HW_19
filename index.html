@@ -14,20 +14,46 @@
             <nav class="inline-block navLI">
                 <ul>
                     <!--<li class="inline-block"><button>01 | about</button></li>-->
-                    <li class="inline-block">01 | about</li>
-                    <li class="inline-block">02 | skills</li>
-                    <li class="inline-block">03 | work</li>
-                    <li class="inline-block">04 | contact</li>
+                    <li class="inline-block"><button class="navButton" id="navButton-AboutMe" role="button"><span class="text">01 | about</span></button></li>
+                    <li class="inline-block"><button class="navButton" id="navButton-Skills" role="button"><span class="text">02 | skills</span></button></li>
+                    <li class="inline-block"><button class="navButton" id="navButton-Work" role="button"><span class="text">03 | work</span></button></li>
+                    <li class="inline-block"><button class="navButton" id="navButton-Contact" role="button"><span class="text">04 | contact</span></button></li>
+                    <!--<<button class="navButton"><li class="inline-block">01 | about</li></button>
+                    <button class="navButton"><li class="inline-block">02 | skills</li></button>
+                    <button class="navButton"><li class="inline-block">03 | work</li></button>
+                    <button class="navButton"><li class="inline-block">04 | contact</li></button>-->
                 </ul>
             </nav>
         </header>
+
+        <section class="Landing">
+            <div id="landingTitleDiv">
+                <h2>Annemarie C Browen</h2>
+                <h5>UX/UI Designer</h5>
+            <!---</div>
+            <div id="landingResumeDiv">-->
+                <button class="resumeButton" role="button">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span class="text">my resume</span>
+                </button> 
+            </div>
+        </section>
 
         <section class="heroImg">
             <div class="content flexContainer">
                 <div id="aboutMeImage">
                 <img id="meImg" src="images/ACB | Img | Alternate.png">
-                <p class="marker">Hi, I'm Annie Brown!</p>
-                <button>Download Resume</button>
+                <!---<p class="marker">Hi, I'm Annie Brown!</p>-->
+                <!---<button class="resumeButton" role="button">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span class="text">my resume</span>
+                </button> --->
                 </div>
                 <!--P section needs refinement later - will develop headings-->
                 <div id="aboutMeText">
@@ -39,6 +65,10 @@
                 <h7>RESEARCH to CREATION</h7>
                 <p>I’ve trained in methods of UX research, data analysis, UX/UI design, front-end web development, more extensive coding, and project management, so I’m adept at wearing many hats and collaborating intuitively with all professionals on my team. As a published author, award-winning public speaker, and highly rated lecturer of 5 years at Connecticut and Dartmouth College, I’m skilled at clear communication of complex ideas to all types, with the proven ability to carry massive projects to successful fruition.</p>
                 </div>
+                <!--<div id="resumeButtonDiv">
+                    <button class="rainbowButton" role="button">my resume</button>  
+                </div>-->
+                               
             </div>
         </section>
 
@@ -50,7 +80,7 @@
             <div class="flexContainer">
                 <div class="flexChild" id="skills1">
                     <!-- <img class="imageFlex skills1 src="images/Skills 1 | UX:UI.png"> -->
-                    <h2>UX / UI skills</h2>
+                    <h2 class="skillsSectionHeading">UX / UI skills</h2>
                     <!-- <p>Skill skill skill 1</p> -->
                     <ul id="skillsULUXUI">
 
@@ -91,7 +121,7 @@
                 </div>
                 <div class="flexChild" id="skills2">
                     <!--<img class="imageFlex skills2" src="images/Skills 2 | soft skills.png">-->
-                    <h2>soft skills</h2>
+                    <h2 class="skillsSectionHeading">soft skills</h2>
                     <!-- <p>Skill skill skill 2</p> -->
                     <ul id="skillsULSoftSkills">
                         <div class="skillsHeading" id="Interpersonal-skillsHeading"><h4 class="skillsSubHeading">Interpersonal +</h4></div>
@@ -120,7 +150,7 @@
                 </div>
                 <div class="flexChild" id="skills3">
                     <!--<img class="imageFlex skills3" src="images/Skills 3 | Software:Tech.png">-->
-                    <h2>software / tech</h2>
+                    <h2 class="skillsSectionHeading">software / tech</h2>
                     <!-- <p>Skill skill skill 3</p> -->
                     <ul id="skillsULSoftwareTech">
                         <div class="skillsHeading" id="Design-skillsHeading"><h4 class="skillsSubHeading">Design +</h4></div>
@@ -182,7 +212,7 @@
                             <h3 class="workHeading">SoulMeets app</h3>
                         </div>
                         <div id="workSubHeading1">
-                            <h5 class="workSubHeading">app design</h5>
+                            <h5 class="workSubHeading">app design | original</h5>
                         </div>
                         <!--fill in placeholder image below with mockup-->
                         <div id="workImg1">
@@ -192,7 +222,8 @@
                             <p class="workText">an app designed to promote effective social connection via cutting-edge research in personality psychology</p>
                         </div>
                         <div id="workButton1">
-                            <button class="workButton">see case study</button>
+                            <button class="rainbowButton" role="button">check it out</button>
+                            <!---<button class="workButton">see case study</button>-->
                         </div>
                     </div>
                 </div>
@@ -211,10 +242,31 @@
                         <p class="workText">a usability makeover for a cause, promoting safety, community, and joy amongst the queer community by getting users to outside events</p>
                     </div>
                     <div id="workButton2">
-                        <button class="workButton">see case study</button>
+                        <button class="rainbowButton" role="button">check it out</button>
+                        <!---<button class="workButton">see case study</button>-->
                     </div>
                 </div>
                 <div class="workChild" id="caseStudy3">
+                    <div>
+                        <div id="workHeading3">
+                            <h3 class="workHeading">One Two Taco</h3>
+                        </div>
+                        <div id="workSubHeading3">
+                            <h5 class="workSubHeading">app & site design | original</h5>
+                        </div>
+                        <div id="workImg3">
+                            <img class="workImg" src="images/ACB | Work | SoulMeets.png">
+                        </div>
+                        <div id="workText3">
+                            <p class="workText">an updated site redesign to increase accessibility and engagement for primary users in search of student loans</p>
+                        </div>
+                        <div id="workButton3">
+                            <button class="rainbowButton" role="button">check it out</button>
+                            <!---<button class="workButton">see case study</button>-->
+                        </div>
+                    </div>
+                </div>
+                <!---<div class="workChild" id="caseStudy3">
                     <div>
                         <div id="workHeading3">
                             <h3 class="workHeading">Department of Education</h3>
@@ -229,9 +281,10 @@
                             <p class="workText">an updated site redesign to increase accessibility and engagement for primary users in search of student loans</p>
                         </div>
                         <div id="workButton3">
+                            <button class="rainbowButton" role="button">check it out</button>
                             <button class="workButton">see case study</button>
                         </div>
-                    </div>
+                    </div>--->
                 </div>
             </div>
 
@@ -258,7 +311,8 @@
             <li class="inline-block footerLI">about</li>
             <li class="inline-block footerLI">skills</li>
             <li class="inline-block footerLI">work</li>
-            <li class="inline-block footerLI">contact</li>
+            <li class="inline-block footerLI">resume</li>
+            <li class="inline-block footerLI">return to top</li>
         </ul>
     </footer>
 

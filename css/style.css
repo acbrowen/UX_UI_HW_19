@@ -204,6 +204,10 @@
 
 /*GENERAL STYLE ACROSS SECTIONS*/
 
+html {
+    scroll-behavior: smooth;
+  }
+
 p { 
     font-family: 'clarika_geometricregular';
     color: #4E4E4E;
@@ -228,15 +232,22 @@ h3{
 h4{
     font-family: 'clarika_geometricregular';
     font-weight: bold;
+    font-size: 20px;
 }
+
 h5{
     font-family: 'clarika_geometricregular';
     font-size: 20px;
 }
 h7{
-    color: #0C777B;
+    /*color: #0C777B;*/
     font-family: 'Black-Marker-Regular';
     font-size: 20px;
+}
+
+h7:hover {
+    color: black;
+    background: linear-gradient(to bottom right, rgba(255,0,0,0), rgba(234, 254, 0, 1));
 }
 .marker{
     font-family: 'ByNote';
@@ -251,6 +262,15 @@ ul{
 li{
     font-family: 'clarika_geometricregular';
     color: #4E4E4E;
+}
+
+#gradientLightHighlight {
+    /* --- background-image: linear-gradient(to right, rgba(255,0,0,0), rgba(221, 255, 0, 0));*/
+    background-image: linear-gradient(to right, rgba(255,0,0,0), rgba(234, 254, 0, 0));
+}
+
+#gradientBlueToYellow {
+    background-image: linear-gradient(to bottom right, #43CDCF, #EAFE00);
 }
 
 /* --- end GENERAL STYLE*/
@@ -280,17 +300,104 @@ li{
 nav{
     width: 73%;
     padding: 10px;
-    font-family: 'clarika_geometricregular';
 }
 
 .navLI li{
-    margin-left: 40px;
+    /*margin-left: 40px;*/
 }
+
+
+
+.navButton {
+    align-items: center;
+    /*background-image: linear-gradient(144deg,#0C777B, #43CDCF 50%,#EAFE00);*/
+    /*background-image: linear-gradient(144deg,#43CDCF,#EAFE00);*/
+    background-image: linear-gradient(to right, rgba(255,0,0,0), #43CDCF);
+    border: 0;
+    /*border-radius: 8px;*/
+    box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+    box-sizing: border-box;
+    color: white;
+    display: flex;
+    font-family: 'clarika_geometricregular';
+    font-size: 12px;
+    /*justify-content: center;*/
+    /*line-height: 1em;*/
+    /*max-width: 100%;
+    min-width: 140px;*/
+    padding: 3px;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    cursor: pointer;
+  }
+  
+  .navButton:active,
+  .navButton:hover {
+    outline: 0;
+  }
+  
+  .navButton span {
+    background-color: #4E4E4E;
+    /*padding: 16px 24px;*/
+    padding: 10px 24px;
+    /*border-radius: 6px;*/
+    width: 100%;
+    height: 100%;
+    transition: 300ms;
+  }
+  
+  .navButton:hover span {
+    background: none;
+  }
+  
+  @media (min-width: 768px) {
+    .navButton {
+      /*font-size: 24px;
+      min-width: 196px;*/
+      font-size: 14px;
+      min-width: 100px;
+    }
+  }
+
 
 .navLI ul{
     width: 50%;
     margin-left: auto;
 }
+
+.Landing{
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /*FIX : eliminate the next 3 lines when you're ready to work out the opacity of overlay issue. right now, you can adjust the background opacity with these lines gone + next pseudochild section back in, but content on top goes transparent too.*/
+    /*QUESTION : how to fix transparency issue described above*/
+    background-image: url("../images/Background-Mind.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#landingTitleDiv h2{
+    margin-left: 750px;
+    margin-top: 150px;
+}
+
+#landingTitleDiv h5{
+    /*margin-left: 915px;*/
+    margin-left: 750px;
+    margin-top: 30px;
+}
+
+#landingTitleDiv button{
+    margin-left: 750px;
+    margin-top: 90px;
+}
+
 
 .heroImg{
     position: relative;
@@ -319,7 +426,183 @@ nav{
     opacity: 0.10;
 }*/
 
+.resumeButton {
+    transform: rotate(-25deg) skew(25deg);
+    transform-style: preserve-3d;
+    position: relative;
+    list-style: none;
+    width: 100px;
+    height: 32px;
+    border: none;
+    background: transparent;
+    font-family: inherit;
+    cursor: pointer;
+    margin-bottom: 12px;
+    font-family: 'clarika_geometricregular';
+  }
+  
+  .resumeButton:before {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: -5px;
+    width: 100%;
+    height: 10px;
+    background: #2a2a2a;
+    transform: skewX(-41deg);
+  }
+  
+  .resumeButton:after {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: -9px;
+    width: 9px;
+    height: 100%;
+    background: #2a2a2a;
+    transform: skewY(-49deg);
+  }
+  
+  .resumeButton span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #2a2a2a;
+    color: #fff;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 1.1s ease-out;
+  }
+  
+  .resumeButton:hover span {
+    z-index: 1000;
+    transition: .3s;
+    color: #fff;
+  }
+  
+  .resumeButton:hover span:nth-child(5) {
+    transform: translate(40px, -40px);
+    opacity: 1;
+  }
+  
+  .resumeButton:hover span:nth-child(4) {
+    transform: translate(30px, -30px);
+    opacity: .8;
+  }
+  
+  .resumeButton:hover span:nth-child(3) {
+    transform: translate(20px, -20px);
+    opacity: .6;
+  }
+  
+  .resumeButton:hover span:nth-child(2) {
+    transform: translate(10px, -10px);
+    opacity: .4;
+  }
+  
+  .resumeButton:hover span:nth-child(1) {
+    transform: translate(0px, 0px);
+    opacity: .2;
+  }
+  
+  .resumeButton:active span:nth-child(5) {
+    transform: translate(20px, -20px);
+    opacity: 1;
+  }
+  
+  .resumeButton:active span:nth-child(4) {
+    transform: translate(15px, -15px);
+  }
+  
+  .resumeButton:active span:nth-child(3) {
+    transform: translate(10px, -10px);
+  }
+  
+  .resumeButton:active span:nth-child(2) {
+    transform: translate(5px, -5px);
+  }
+  
+  .resumeButton:active span:nth-child(1) {
+    transform: translate(0px, 0px);
+  }
+  
+  .resumeButton:nth-child(1):hover span {
+    background: #43CDCF;
+  }
 
+  .rainbowButton {
+    padding: 0.6em 2em;
+    border: none;
+    outline: none;
+    color: rgb(255, 255, 255);
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    font-family: 'clarika_geometricregular';
+  }
+  
+  .rainbowButton:before {
+    content: "";
+    background: linear-gradient(
+      45deg,
+      #ff0000,
+      #ff7300,
+      #fffb00,
+      #48ff00,
+      #00ffd5,
+      #002bff,
+      #7a00ff,
+      #ff00c8,
+      #ff0000
+    );
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    -webkit-filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing-rainbowButton 20s linear infinite;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 10px;
+  }
+  
+  @keyframes glowing-rainbowButton {
+    0% {
+      background-position: 0 0;
+    }
+    50% {
+      background-position: 400% 0;
+    }
+    100% {
+      background-position: 0 0;
+    }
+  }
+  
+  .rainbowButton:after {
+    z-index: -1;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #222;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+  }
+  
+  
 
 .content{
     width: 500px;
@@ -334,9 +617,15 @@ footer{
     display: inline-block;
     vertical-align: top;
     padding: 0 auto;
+    margin-left: 800px;
 }
 .footerLI{
     padding: 10px 20px;
+    color: white;
+}
+
+.footerLI:hover {
+    color: #43CDCF;
 }
 /*left Side About Me*/
 .logoImg{
@@ -357,6 +646,7 @@ footer{
 #aboutMeText{
     min-width: 600px;
     margin-left: 100px;
+    margin-top: 75px;
 }
 
 /* --- end ABOUT ME*/
@@ -375,8 +665,9 @@ footer{
     justify-content: space-around;
 }
 .flexChild{
-    width: 30%;
-    height: 450px;
+    width: 33.3%;
+    /*height: 450px;*/
+    height: 520px;
     border-color: black;
 }
 
@@ -414,6 +705,22 @@ h3{
     background-size: cover;
     background-position: center center;
 }
+
+.skillsSectionHeading{
+    border-style: none;
+    background-color: rgba(255,0,0,0);
+}
+
+.skillsSectionHeading:hover{
+    /*background: linear-gradient(to bottom right, rgba(255,0,0,0), rgba(234, 254, 0, 0));*/
+    background: linear-gradient(to bottom right, rgba(255,0,0,0), rgba(234, 254, 0, 1));
+}
+
+.skillsCollapse{
+    display: none;
+}
+
+
 /*NOTE: moved to General Style, but consider whether you need this here for specific elements only:
 h3{
     text-align: center;
