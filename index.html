@@ -1,23 +1,25 @@
 <!DOCTYPE html>
 <html>
     <script src="https://kit.fontawesome.com/2bc4520897.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/style.css" type="text/css" charset="utf-8" />
     <head>
         <title>ACB | Portfolio</title>
     </head>
     <body>
     
-        <header class="navigation">
+        <header class="navigation sticky-top">
             <div class="inline-block" id="logo">
                 <img class="logoImg" src="images/ACB | Logo.png">
             </div>
             <nav class="inline-block navLI">
                 <ul>
                     <!--<li class="inline-block"><button>01 | about</button></li>-->
-                    <li class="inline-block"><button class="navButton" id="navButton-AboutMe" role="button"><span class="text">01 | about</span></button></li>
-                    <li class="inline-block"><button class="navButton" id="navButton-Skills" role="button"><span class="text">02 | skills</span></button></li>
-                    <li class="inline-block"><button class="navButton" id="navButton-Work" role="button"><span class="text">03 | work</span></button></li>
-                    <li class="inline-block"><button class="navButton" id="navButton-Contact" role="button"><span class="text">04 | contact</span></button></li>
+                    <li class="inline-block"><button class="navButton" id="navButton-AboutMe" role="button" data-bs-target="#heroImg"><span class="text"><a class="navA" href="#aboutMeSection">01 | about</a></span></button></li>
+                    <li class="inline-block"><button class="navButton" id="navButton-Skills" role="button"><span class="text"><a class="navA" href="#skillsSection">02 | skills</a></span></button></li>
+                    <li class="inline-block"><button class="navButton" id="navButton-Work" role="button"><span class="text"><a class="navA" href="#workSection">03 | work</a></span></button></li>
+                    <li class="inline-block"><button class="navButton" id="navButton-Contact" role="button"><span class="text"><a class="navA" href="#contactMeSection">04 | contact</a></span></button></li>
                     <!--<<button class="navButton"><li class="inline-block">01 | about</li></button>
                     <button class="navButton"><li class="inline-block">02 | skills</li></button>
                     <button class="navButton"><li class="inline-block">03 | work</li></button>
@@ -26,7 +28,7 @@
             </nav>
         </header>
 
-        <section class="Landing">
+        <section class="Landing" id="landingSection">
             <div id="landingTitleDiv">
                 <h2>Annemarie C Browen</h2>
                 <h5>UX/UI Designer</h5>
@@ -42,11 +44,10 @@
             </div>
         </section>
 
-        <section class="heroImg">
+        <section class="heroImg" id="aboutMeSection">
             <div class="content flexContainer">
                 <div id="aboutMeImage">
                 <img id="meImg" src="images/ACB | Img | Alternate.png">
-                <!---<p class="marker">Hi, I'm Annie Brown!</p>-->
                 <!---<button class="resumeButton" role="button">
                     <span></span>
                     <span></span>
@@ -55,7 +56,6 @@
                     <span class="text">my resume</span>
                 </button> --->
                 </div>
-                <!--P section needs refinement later - will develop headings-->
                 <div id="aboutMeText">
                 <p>Making connections is what I do!</p>
                 <h7>FEELINGS to BEHAVIOR</h7>
@@ -73,14 +73,13 @@
         </section>
 
  <!--  My UX Skills section coded using CSS flex -->
-        <section class="mySkills">
+        <section class="mySkills" id="skillsSection">
             <!--comment out title below to adjust to planned design --- -->
             <h1>My UX Skills</h1>
-            <!--  GRADER NOTE: I plan to turn this absurdly long skills list into an accordion style with the next assignment!-->
             <div class="flexContainer">
                 <div class="flexChild" id="skills1">
                     <!-- <img class="imageFlex skills1 src="images/Skills 1 | UX:UI.png"> -->
-                    <h2 class="skillsSectionHeading">UX / UI skills</h2>
+                    <h2 class="skillsSectionHeading" id="skillsHeading1">UX / UI skills</h2>
                     <!-- <p>Skill skill skill 1</p> -->
                     <ul id="skillsULUXUI">
 
@@ -121,7 +120,7 @@
                 </div>
                 <div class="flexChild" id="skills2">
                     <!--<img class="imageFlex skills2" src="images/Skills 2 | soft skills.png">-->
-                    <h2 class="skillsSectionHeading">soft skills</h2>
+                    <h2 class="skillsSectionHeading" id="skillsHeading2">soft skills</h2>
                     <!-- <p>Skill skill skill 2</p> -->
                     <ul id="skillsULSoftSkills">
                         <div class="skillsHeading" id="Interpersonal-skillsHeading"><h4 class="skillsSubHeading">Interpersonal +</h4></div>
@@ -150,7 +149,7 @@
                 </div>
                 <div class="flexChild" id="skills3">
                     <!--<img class="imageFlex skills3" src="images/Skills 3 | Software:Tech.png">-->
-                    <h2 class="skillsSectionHeading">software / tech</h2>
+                    <h2 class="skillsSectionHeading" id="skillsHeading3">software / tech</h2>
                     <!-- <p>Skill skill skill 3</p> -->
                     <ul id="skillsULSoftwareTech">
                         <div class="skillsHeading" id="Design-skillsHeading"><h4 class="skillsSubHeading">Design +</h4></div>
@@ -202,7 +201,7 @@
 
         </section>
 
-        <section class="myWork">
+        <section class="myWork" id="workSection">
             <!--comment out title below to adjust to planned design --- -->
             <h1>My Work</h1>
             <div class="workGrid">
@@ -258,7 +257,7 @@
                             <img class="workImg" src="images/ACB | Work | SoulMeets.png">
                         </div>
                         <div id="workText3">
-                            <p class="workText">an updated site redesign to increase accessibility and engagement for primary users in search of student loans</p>
+                            <p class="workText">a math game app, following the journey of a mischievous raccoon rascal in his quest to make friends and collect tacos</p>
                         </div>
                         <div id="workButton3">
                             <button class="rainbowButton" role="button">check it out</button>
@@ -306,13 +305,10 @@
     <i class="fa-thin fa-arrows-to-eye" style="color: #0c777b;"></i>
     -->
 
-    <footer>
+    <footer class="sticky-bottom">
         <ul class="footerUL">
-            <li class="inline-block footerLI">about</li>
-            <li class="inline-block footerLI">skills</li>
-            <li class="inline-block footerLI">work</li>
             <li class="inline-block footerLI">resume</li>
-            <li class="inline-block footerLI">return to top</li>
+            <li class="inline-block footerLI"><a class="footerA" href="#landingSection">return to top  ^</a></li>
         </ul>
     </footer>
 

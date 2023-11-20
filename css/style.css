@@ -1,4 +1,5 @@
 /* Many fonts! Begin---*/
+
 @font-face {
     font-family: 'clarika_geometricregular';
     src: url('fonts/clarikageo-regular-webfont.eot');
@@ -208,6 +209,11 @@ html {
     scroll-behavior: smooth;
   }
 
+a {
+    text-decoration: none;
+    color: white;
+}
+
 p { 
     font-family: 'clarika_geometricregular';
     color: #4E4E4E;
@@ -217,6 +223,7 @@ h1{
     font-family: 'made_tommy_softbold';
     font-size: 40px;
     padding: 20px;
+    color: rgba(255,255,255,0);
 }
 h2{
     font-family: 'made_tommy_softbold';
@@ -295,6 +302,7 @@ li{
 .navigation{
     /*opacity: 0.8;*/
     /*font-family:Arial, Helvetica, sans-serif;*/
+    background-color: rgba(255,255,255,0.8);
 }
 
 nav{
@@ -306,6 +314,9 @@ nav{
     /*margin-left: 40px;*/
 }
 
+.navA{
+    color: white;
+}
 
 
 .navButton {
@@ -615,9 +626,9 @@ footer{
 }
 .footerUL{
     display: inline-block;
-    vertical-align: top;
+    vertical-align: center;
     padding: 0 auto;
-    margin-left: 800px;
+    margin-left: 1100px;
 }
 .footerLI{
     padding: 10px 20px;
@@ -627,6 +638,11 @@ footer{
 .footerLI:hover {
     color: #43CDCF;
 }
+
+.footerA:hover {
+    color: #43CDCF;
+}
+
 /*left Side About Me*/
 .logoImg{
     max-height: 60px;
@@ -656,7 +672,8 @@ footer{
 /* ---Section 2 || SKILLS --- Begin....*/
 
 .mySkills{
-    height: 1000px;
+    height: 100vh;
+    background-color: white;
 }
 
 .flexContainer{
@@ -667,12 +684,28 @@ footer{
 .flexChild{
     width: 33.3%;
     /*height: 450px;*/
-    height: 520px;
+    /*height: 520px; <--this one was perfect for keeping visuals of the image in place, but not for the expansion of accordion; that has to take priority*/
+    height: 90vh;
     border-color: black;
+    background-color: white;
 }
+
+#skillsHeading1{
+    background-color: #ADADAD;
+}
+
+#skillsHeading2{
+    background-color: #EAFE00;
+}
+
+#skillsHeading3{
+    background-color: #0C777B;
+}
+    
 
 .skillsSubHeading{
     font-family: 'made_tommy_softregular';
+    margin-bottom: 20px;
 }
 /* NOTE: moved to General Style section:
 h1{
@@ -688,19 +721,25 @@ h3{
     height: 300px;
 }*/
 #skills1{
-    background-image: url("../images/Skills1.jpg");
+    background-image: url("../images/Skills1.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
 }
+
+/*.flexChild:hover {
+    background-image: none;
+    background-color: white;
+}*/
+
 #skills2{
-    background-image: url("../images/Skills2.jpg");
+    background-image: url("../images/Skills2.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
 }
 #skills3{
-    background-image: url("../images/Skills3.jpg");
+    background-image: url("../images/Skills3.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -709,15 +748,57 @@ h3{
 .skillsSectionHeading{
     border-style: none;
     background-color: rgba(255,0,0,0);
+    padding: 20px;
 }
 
-.skillsSectionHeading:hover{
+.skillsSubHeading:hover{
     /*background: linear-gradient(to bottom right, rgba(255,0,0,0), rgba(234, 254, 0, 0));*/
     background: linear-gradient(to bottom right, rgba(255,0,0,0), rgba(234, 254, 0, 1));
 }
 
+/*  NOTE: Below, code to create hover style only without character +/- switch.  Return to this version if you approach with JavaScript instead.
+---
+.skillsSubHeadingButton:hover{
+    background: linear-gradient(to bottom right, rgba(255,0,0,0), rgba(234, 254, 0, 1));
+}
+---*/
+
+/*  NOTE: Below, code to change content between  +/- characters for accordion.  Faulty as written here, because the timing of the "-" appearance is occurring on hover, regardless of whether occurring before or after dropdown has occurred. Styling for button also needed if you return to this version.
+---
+.skillsSubHeadingButton:after{
+     content:'UX +'; 
+}
+
+.skillsSubHeadingButton:hover:after{
+     content:'UX -'; 
+}
+.skillsSubHeadingButton {
+     width:5em;
+    }
+---*/
+
+/*button .comment {
+    display: none;
+  }
+  
+  button:hover .replies {
+    display: none;
+  }
+  
+  button:hover .comment {
+    display: inline;
+  }*/
+
+
 .skillsCollapse{
     display: none;
+    margin-bottom: 10px;
+}
+
+ul #skillsULSoftwareTech::before {
+        content: "fa-thin fa-chart-scatter";
+        padding: 0 10px 0 0;
+
 }
 
 
@@ -748,6 +829,7 @@ i {
 
 .myWork{
     min-height: 800px;
+    height: 1vh;
     background-image: url("../images/Background-Sider.jpg");
     background-repeat: no-repeat;
     background-size: cover;

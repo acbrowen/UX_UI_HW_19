@@ -83,3 +83,12 @@ $("#navButton-AboutMe").click(function() {
         scrollTop: $("#heroImg").offset().top
     }, 2000);
 });
+
+//$('#UX-skillsHeading').hover(
+    //function(){
+        //$(this).text('UX -');
+    //},
+    //function(){
+        //$(this).text('UX +');
+    //}
+//);
